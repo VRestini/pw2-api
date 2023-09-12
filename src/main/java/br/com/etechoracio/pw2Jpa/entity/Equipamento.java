@@ -1,5 +1,6 @@
 package br.com.etechoracio.pw2Jpa.entity;
 
+import br.com.etechoracio.pw2Jpa.enums.TipoEquipamentoEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,7 +26,8 @@ public class Equipamento {
     @Column( name = "TX_NUMERO_SERIE")
     private String numeroSerie;
 
+    @Enumerated (EnumType.STRING)
     @Column (name = "TX_TIPO")
-    private String tipo;
+    private TipoEquipamentoEnum tipo;
 
 }
